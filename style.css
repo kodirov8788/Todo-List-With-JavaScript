@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 35%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.wrapper {
+    width: 84%;
+    margin: 30px auto;
+    padding: 10px 0px 30px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 4;
+}
+
+.task__adder {
+    width: 90%;
+    margin: 0px 5%;
+}
+
+.task__adder :is(h1) {
+    padding: 20px 0px;
+    font-weight: 300;
+}
+
+#task__adderPanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#task__adderPanel :is(input) {
+    padding: 10px 0px;
+    flex: 1;
+    font-size: 16px;
+    text-indent: 10px;
+    outline: none;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    border: none;
+    color: #686565;
+    box-shadow: rgb(189 183 183 / 39%) 0px 0px 3px 1px inset, rgb(255 255 255) 0px -1px 1px, rgb(255 255 255) 0px 1px 0px;
+}
+
+#task__filter {
+    width: 84%;
+    padding: 10px 0px;
+    font-size: 16px;
+    margin-left: 40px;
+    text-indent: 10px;
+    outline: none;
+    background-color: rgb(248, 248, 248);
+    border-radius: 15px;
+    border: none;
+    color: rgb(104, 101, 101);
+    box-shadow: rgb(189 183 183 / 39%) 0px 0px 3px 1px inset, rgb(255 255 255) 0px -1px 1px, rgb(255 255 255) 0px 1px 0px;
+}
+
+#task__filter::placeholder {
+    color: rgb(179, 179, 179);
+}
+
+#task__adderPanel>input::placeholder {
+    color: rgb(179, 179, 179);
+}
+
+#task__adderPanel :is(button) {
+    padding: 10px 10px;
+    font-size: 16px;
+    margin-left: 20px;
+    background-color: rgb(13, 133, 73);
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+}
+
+.task__collection {
+    width: 84%;
+    min-height: 300px;
+    margin: 0px auto;
+    height: auto;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.task {
+    width: 90%;
+    height: 50px;
+    margin: 20px auto;
+    background-color: rgba(253, 252, 252, 0.897);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+    animation: fade 0.7s linear;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scaleX(0.7);
+    }
+
+    20% {
+        transform: scaleX(1);
+    }
+
+    40% {
+        transform: scaleX(0.75);
+    }
+
+    60% {
+        transform: scaleX(1);
+    }
+
+    80% {
+        transform: scaleX(0.85);
+    }
+
+    100% {
+        opacity: 100%;
+        transform: scaleX(1);
+    }
+}
+
+.task>p {
+    min-width: 80%;
+    max-width: 90%;
+    flex: 1;
+    color: rgb(8, 136, 61);
+
+}
+
+.task>a>i {
+    color: #f02c2c;
+    cursor: pointer;
+}
+
+.operations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#delete__all {
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    background-color: #000;
+    cursor: pointer;
+}
+
+#sort__select {
+    padding: 10px 15px;
+    font-size: 17px;
+    margin-right: 20px;
+    border: none;
+    background-color: rgb(255, 255, 26);
+    border-radius: 5px;
+    outline: none;
+}
+
+option {
+    background-color: #000;
+    color: yellow;
+}
+
+.alert__ask {
+    width: 250px;
+    height: 250px;
+    background-color: rgb(253, 249, 14);
+    font-size: 17px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.alert__ask>i {
+    font-size: 50px;
+    margin: 30px 0px;
+}
+
+.alert__ask>p {
+    width: 80%;
+    text-align: center;
+}

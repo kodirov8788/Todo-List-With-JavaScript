@@ -1,0 +1,11 @@
+// yesBtn.addEventListener('click' () => {
+//     alertAsk.style.display = `none`;
+//     con.style.display = `block`;
+//     while (collection.firstChild) {
+//         collection.removeChild(collection.firstChild);
+//     }
+// });
+// noBtn.addEventListener('click' () => {
+//     alertAsk.style.display = `none`;
+//     con.style.display = `block`;
+// });
